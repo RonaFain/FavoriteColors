@@ -1,3 +1,22 @@
 .progress-bar {
-    background-color: rgb(182, 181, 181);
+    .progress-container {
+        width: 200px;
+        height: 20px;
+        background-color: $clr4;
+
+        .progress-filter {
+            height: 100%;
+            text-align: right;
+            background-color: $clr7;
+            border-radius: inherit;
+
+            transition: width 1s ease-in-out;
+            
+            .progress-label {
+                padding: 5px;
+                color: $clr6;
+                font-weight: bold;
+            }
+        }
+    }
 }
