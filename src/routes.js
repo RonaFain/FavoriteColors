@@ -1,10 +1,10 @@
-import { HomePage } from './pages/home-page.jsx'
+import { ColorApp } from './pages/color-app.jsx'
 import { LoginPage } from './pages/login-page.jsx'
 
 const routes = [
   {
     path: '/',
-    element: <HomePage />,
+    element: <ColorApp />,
   },
   {
     path: '/login',

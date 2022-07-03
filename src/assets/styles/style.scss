@@ -9,6 +9,9 @@
 @import "basics/base.scss";
 @import "basics/layout.scss";
 
-@import "pages/home-page.scss";
+@import "pages/color-app.scss";
 
 @import "cmps/app-header.scss";
+@import "cmps/color-list.scss";
+@import "cmps/color-preview.scss";
+@import "cmps/progress-bar.scss";
