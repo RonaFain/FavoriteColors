@@ -1,12 +1,18 @@
 import { useEffect, useState } from 'react'
 import { colorService } from '../services/color.service'
+import { socketService, SOCKET_EVENT_ADD_VOTE, SOCKET_EMIT_CLICK_VOTE } from '../services/socket.service'
+
 import { ColorList } from '../cmps/color-list'
 
 export function ColorApp() {
     const [colors, setColors] = useState(null)
 
     useEffect(() => {
+        socketService.on(SOCKET_EVENT_ADD_VOTE, addVote)
         loadColors()
+        return () => {
+            socketService.off(SOCKET_EVENT_ADD_VOTE, addVote)
+        }
     }, [])
 
     const loadColors = async () => {
@@ -26,6 +32,7 @@ export function ColorApp() {
     const onUpdateColor = async (color) => {
         try {
             const updatedColor = await colorService.update(color)
+            socketService.emit(SOCKET_EMIT_CLICK_VOTE, {...updatedColor})
             addVote(updatedColor)
         } catch (err) {
             console.log('Error in onUpdateColor', err)
