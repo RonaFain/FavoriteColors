@@ -7,9 +7,7 @@ import './assets/styles/style.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  // <React.StrictMode>
   <Router>
     <RootCmp />
   </Router>
-  // </React.StrictMode>
 )

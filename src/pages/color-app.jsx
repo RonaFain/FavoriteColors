@@ -20,7 +20,6 @@ export function ColorApp() {
             const colors = await colorService.query()
             setColors(colors)
         } catch (err) {
-            console.log('Error in loadColors' , err)
             throw err
         }
     }

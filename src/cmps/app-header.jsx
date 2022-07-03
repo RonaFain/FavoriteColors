@@ -17,11 +17,11 @@ export function AppHeader() {
       <div className="main-layout">
         <div className="header-container">
           <NavLink to="/" className="logo">
-            Logo
+            <img src="./color-64.png" />
           </NavLink>
           <nav className={`nav-container ${classOpen}`}>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/About">About</NavLink>
           </nav>
           <GiHamburgerMenu className="hamburger-icon" onClick={toggleMenu} />
         </div>

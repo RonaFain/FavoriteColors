@@ -5,11 +5,19 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 30px;
 
         .logo {
-            font-family: lobster;
             font-size: rem(40px);
-            color: $clr3;
+            width: 40px;
+            position: relative;
+            
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
 
         .nav-container {
@@ -38,7 +46,8 @@
                 }
 
                 &.active {
-                    color: lighten($clr3, 15%);
+                    // color: lighten($clr3, 15%);
+                    color: $clr1;
                 }
             }
 

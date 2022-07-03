@@ -1,5 +1,5 @@
 import { ColorApp } from './pages/color-app.jsx'
-import { LoginPage } from './pages/login-page.jsx'
+import { AboutPage } from './pages/about-page.jsx'
 
 const routes = [
   {
@@ -7,9 +7,9 @@ const routes = [
     element: <ColorApp />,
   },
   {
-    path: '/login',
-    element: <LoginPage />,
-  },
+    path: '/about',
+    element: <AboutPage />,
+  }
 ]
 
 export default routes

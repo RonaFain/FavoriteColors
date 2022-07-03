@@ -3,7 +3,8 @@
 }
 
 html {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    // font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: lato;
     line-height: 1.8;
     line-height: lh(26px);
 
@@ -42,6 +43,7 @@ h2 {
     margin: em(63px) 0;
     grid-area: title;
     color: $clr1;
+    text-align: center;
     text-transform: uppercase;
     @include type(boldCondensed);
 }
@@ -74,4 +76,24 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: $clr4;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
